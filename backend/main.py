@@ -23,7 +23,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",
-        "https://your-app-name.vercel.app",  # we'll update this after Step 6
+        "https://customer-support-ai-ashy.vercel.app",  # we'll update this after Step 6
     ],
     allow_credentials=True,
     allow_methods=["*"],
