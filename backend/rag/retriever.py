@@ -1,11 +1,12 @@
 # rag/retriever.py
 # Searches the ChromaDB vector store for chunks relevant to a query
 # Used by main.py every time a user sends a message
-
+import os
 import chromadb
 from chromadb.utils import embedding_functions
 
-VECTORSTORE_DIR = "rag/vectorstore"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # backend/
+VECTORSTORE_DIR = os.path.join(BASE_DIR, "rag", "vectorstore")
 COLLECTION_NAME = "techmart_knowledge"
 
 # Load the embedder once when this module is imported (not on every call)

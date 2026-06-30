@@ -8,8 +8,11 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 import chromadb
 from chromadb.utils import embedding_functions
 
-KNOWLEDGE_BASE_DIR = "../knowledge_base"
-VECTORSTORE_DIR = "rag/vectorstore"
+# ingest.py is at: customer-support-ai/backend/rag/ingest.py
+# We need to go up 2 levels to reach customer-support-ai/, then into knowledge_base/
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+KNOWLEDGE_BASE_DIR = os.path.join(PROJECT_ROOT, "knowledge_base")
+VECTORSTORE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "rag", "vectorstore")
 COLLECTION_NAME = "techmart_knowledge"
 
 
