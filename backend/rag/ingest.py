@@ -68,9 +68,7 @@ def chunk_documents(documents: list[dict]) -> list[dict]:
 
 def build_vectorstore(chunks: list[dict]):
     # This embedding function runs locally on your M3 — no API key needed
-    embedder = embedding_functions.SentenceTransformerEmbeddingFunction(
-        model_name="all-MiniLM-L6-v2"
-    )
+    embedder = embedding_functions.DefaultEmbeddingFunction()
 
     client = chromadb.PersistentClient(path=VECTORSTORE_DIR)
 

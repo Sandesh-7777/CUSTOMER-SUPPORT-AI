@@ -10,9 +10,7 @@ VECTORSTORE_DIR = os.path.join(BASE_DIR, "rag", "vectorstore")
 COLLECTION_NAME = "techmart_knowledge"
 
 # Load the embedder once when this module is imported (not on every call)
-_embedder = embedding_functions.SentenceTransformerEmbeddingFunction(
-    model_name="all-MiniLM-L6-v2"
-)
+_embedder = embedding_functions.DefaultEmbeddingFunction()
 
 # Connect to the same persistent ChromaDB we built in ingest.py
 _client = chromadb.PersistentClient(path=VECTORSTORE_DIR)
