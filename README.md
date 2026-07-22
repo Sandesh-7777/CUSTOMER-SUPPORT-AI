@@ -2,8 +2,8 @@
 
 A full-stack AI customer support chatbot for **TechMart Electronics** — a fictional consumer electronics company. Customer queries are automatically classified by intent and routed to one of five specialized AI agents, each grounded in real company documents via RAG (Retrieval-Augmented Generation).
 
-**Live demo:** `[https://your-app.vercel.app](https://customer-support-ai-ashy.vercel.app/)`  
-**Backend API:** `[https://your-backend.onrender.com](https://customer-support-ai-backend-euiq.onrender.com)`
+**Live demo:** `[https://customer-support-ai-ashy.vercel.app)`  
+**Backend API:** `[https://customer-support-ai-backend-euiq.onrender.com)`
 
 ---
 
